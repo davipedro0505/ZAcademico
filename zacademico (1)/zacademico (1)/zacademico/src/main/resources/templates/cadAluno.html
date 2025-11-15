@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+
+<h2>Cadastrar Aluno</h2>
+
+<form th:action="@{/aluno/salvar}" th:object="${aluno}" method="post">
+
+    <label>Nome completo:</label><br>
+    <input type="text" th:field="*{nome}" required><br><br>
+
+    <label>CPF:</label><br>
+    <input type="text" th:field="*{cpf}" required><br><br>
+
+    <label>Email pessoal:</label><br>
+    <input type="email" th:field="*{emailPessoal}" required><br><br>
+
+    <label>Email institucional:</label><br>
+    <input type="email" th:field="*{emailInstitucional}"><br><br>
+
+    <label>Telefone:</label><br>
+    <input type="text" th:field="*{telefone}"><br><br>
+
+    <label>Data de nascimento:</label><br>
+    <input type="date" th:field="*{dataNascimento}"><br><br>
+
+    <label>Matrícula:</label><br>
+    <input type="text" th:field="*{matricula}" required><br><br>
+
+    <label>Endereço:</label><br>
+    <input type="text" th:field="*{endereco}"><br><br>
+
+    <button type="submit">Salvar</button>
+</form>
+
+</body>
+</html>
